@@ -22,6 +22,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libmbedtls12 \
 	libmbedx509-0 \
 	git \
+	gcc \
+	make \
+	python3 \
+	python3-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
 # install neko, which is a dependency of haxelib
