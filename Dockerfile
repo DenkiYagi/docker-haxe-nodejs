@@ -22,10 +22,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libmbedtls12 \
 	libmbedx509-0 \
 	git \
-	gcc \
-	make \
-	python3 \
-	python3-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
 # install neko, which is a dependency of haxelib
@@ -115,5 +111,12 @@ RUN set -ex \
 RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - \
 	&& apt-get install -y nodejs \
 	&& npm install -g yarn
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    make \
+    gcc \
+    python3 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
 
 CMD ["haxe"]
