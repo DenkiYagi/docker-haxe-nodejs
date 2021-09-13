@@ -117,6 +117,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     python3 \
     python3-pip \
+    linux-libc-dev \
     && rm -rf /var/lib/apt/lists/*
 
 CMD ["haxe"]
