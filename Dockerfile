@@ -114,19 +114,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
-    # gcc \
     g++ \
-    # python3 \
-    # python3-pip \
-    # linux-libc-dev \
     libc6-dev \
     && rm -rf /var/lib/apt/lists/*
-RUN npm init -y\
-    && npm install -S \
-    ffi-napi \
-    jimp \
-    pixelmatch \
-    ref-napi \
-    ref-struct-napi
 
 CMD ["haxe"]
