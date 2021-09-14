@@ -116,7 +116,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
     g++ \
     libc6-dev \
-    bash \
     && rm -rf /var/lib/apt/lists/*
 
 RUN npm -g install -y --unsafe-perm\
