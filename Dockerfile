@@ -119,7 +119,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     bash \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm -g install -y \
+RUN npm -g install -y --unsafe-perm\
     ffi-napi \
     jimp \
     pixelmatch \
