@@ -112,4 +112,17 @@ RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash - \
 	&& apt-get install -y nodejs \
 	&& npm install -g yarn
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    make \
+    g++ \
+    libc6-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN npm -g install -y --unsafe-perm\
+    ffi-napi \
+    jimp \
+    pixelmatch \
+    ref-napi \
+    ref-struct-napi
+
 CMD ["haxe"]
